@@ -45,7 +45,7 @@ import importlib
 import json
 
 
-__version__ = "1.3.6"
+__version__ = "1.3.7"
 
 # Enable support for `from Qt import *`
 __all__ = []
@@ -812,9 +812,6 @@ def _isvalid(object):
         object (QObject): QObject to check the validity of.
 
     """
-
-    assert isinstance(object, Qt.QtCore.QObject)
-
     if hasattr(Qt, "_shiboken2"):
         return getattr(Qt, "_shiboken2").isValid(object)
 
